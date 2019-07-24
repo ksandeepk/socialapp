@@ -1,0 +1,39 @@
+
+<body>
+        <style>
+                table,th{
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    color: black;
+                }
+                th{
+                    color: blue;
+                }
+
+            
+            </style>
+            
+
+    <table  style="width:170px;">
+        <tr>
+            <th>name</th>     
+        </tr>
+    
+    {% for d in data %}
+        <tr>
+            <td>{{d.name}}</td>  
+        </tr>     
+      
+    {%if d.profile_picture%}
+        <td><img width="100px" src="{{d.profile_picture.url}}"/><br></td>
+    {%endif%}
+
+
+    {% endfor %}
+    </table>
+
+
+    
+</body>
+</html>
+

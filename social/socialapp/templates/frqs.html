@@ -1,0 +1,10 @@
+Your friend requests<br>
+{%csrf_token%}
+profile name:{{name}}<br>
+
+{% for friend_request in data %}
+        <li>{{ friend_request }}</li>
+    {% endfor %}
+
+<button>conform</button>
+<button>ignore</button>
